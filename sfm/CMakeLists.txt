@@ -1,7 +1,7 @@
 project(sfm)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-fPIC")
-
+set(CMAKE_BUILD_TYPE Release)
 
 include_directories("..")
 set(HEADERS
@@ -56,6 +56,6 @@ set(SOURCE_FILES
         bundler_incremental.cc
         bundler_init_pair.cc
         )
-add_library(sfm ${HEADERS} ${SOURCE_FILES})
+add_library(sfm SHARED ${HEADERS} ${SOURCE_FILES})
 #target_link_libraries(sfm core util features)
 

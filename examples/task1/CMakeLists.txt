@@ -1,7 +1,7 @@
 project(class1)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-fPIC")
-
+set(CMAKE_BUILD_TYPE Release)
 include_directories("../..")
 
 set(VISUAL_HEADER visualizer.h)  #${VISUAL_HEADER}

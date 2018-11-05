@@ -12,6 +12,7 @@
 #include <fstream>
 #include <sstream>
 #include <set>
+#include <assert.h>
 #include <util/system.h>
 #include <sfm/ransac_fundamental.h>
 #include "math/functions.h"

@@ -12,5 +12,5 @@ set(HEADERS
         vector.h
         )
 
-add_library(math ${HEADERS})
+add_library(math SHARED CMakeLists.txt)
 

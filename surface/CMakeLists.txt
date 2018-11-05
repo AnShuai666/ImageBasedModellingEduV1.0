@@ -1,7 +1,7 @@
 project(surface)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-fPIC")
-
+set(CMAKE_BUILD_TYPE Release)
 
 include_directories("..")
 set(HEADERS
@@ -29,5 +29,5 @@ set(SOURCE_FILES
         triangulation.cc
         voxel.cc
         )
-add_library(surface ${HEADERS} ${SOURCE_FILES})
+add_library(surface SHARED ${HEADERS} ${SOURCE_FILES})
 #target_link_libraries(sfm core util features)

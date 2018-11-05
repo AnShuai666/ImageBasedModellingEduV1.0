@@ -1,7 +1,7 @@
 project(core)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-fPIC")
-
+set(CMAKE_BUILD_TYPE Release)
 
 # find linpng
 find_package(PNG REQUIRED)
@@ -73,6 +73,6 @@ set(SOURCE_FILES
         mesh_io_smf.cc
         mesh_io_pbrt.cc
         )
-add_library(core ${HEADERS} ${SOURCE_FILES})
+add_library(core SHARED ${HEADERS} ${SOURCE_FILES})
 target_link_libraries(core util ${PNG_LIBRARIES} ${JPEG_LIBRARIES} ${TIFF_LIBRARIES})
 

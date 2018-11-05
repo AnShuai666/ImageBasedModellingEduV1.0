@@ -1,7 +1,7 @@
 project(mvs)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-fPIC")
-
+set(CMAKE_BUILD_TYPE Release)
 
 include_directories("..")
 set(HEADERS
@@ -29,6 +29,6 @@ set(SOURCE_FILES
         patch_sampler.cc
         single_view.cc
         )
-add_library(mvs ${HEADERS} ${SOURCE_FILES})
+add_library(mvs SHARED ${HEADERS} ${SOURCE_FILES})
 #target_link_libraries(sfm core util features)
 
